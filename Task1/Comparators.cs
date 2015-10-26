@@ -7,7 +7,7 @@ namespace Task1
     {
         public int RowResult(int[] row)
         {
-            return (row == null) ? 0 : -1 * row.Sum();
+            return (row == null) ? int.MinValue : -1 * row.Sum();
         }
     }
 
@@ -15,7 +15,7 @@ namespace Task1
     {
         public int RowResult(int[] row)
         {
-            return (row == null) ? 0 : row.Sum();
+            return (row == null) ? int.MinValue : row.Sum();
         }
     }
 
@@ -26,7 +26,7 @@ namespace Task1
             if (row == null)
                 return int.MaxValue;
             if (row.Length == 0)
-                return 0;
+                return int.MaxValue;
             return -1 * row.Max(a => Math.Abs(a));
         }
     }
@@ -38,7 +38,7 @@ namespace Task1
             if (row == null)
                 return int.MinValue;
             if (row.Length == 0)
-                return 0;
+                return int.MinValue;
             return row.Max(a => Math.Abs(a));
         }
     }
