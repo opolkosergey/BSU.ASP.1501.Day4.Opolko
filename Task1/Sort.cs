@@ -6,10 +6,15 @@ namespace Task1
     {
         public static void BubbleSort(int[][] array, IArrayComparator comparator)
         {
-            if (array == null)
-                throw new ArgumentNullException(nameof(array));
-            if (comparator == null)
-                throw new ArgumentNullException(nameof(comparator));
+	        if (array == null)
+	        {
+		        throw new ArgumentNullException(nameof(array));
+	        }
+
+	        if (comparator == null)
+	        {
+		        throw new ArgumentNullException(nameof(comparator));
+	        }
 
             for (int i = 0; i < array.Length; i++)
             {
